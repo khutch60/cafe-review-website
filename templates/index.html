@@ -1,0 +1,20 @@
+{% include 'header.html' %}
+
+<body style="background-image: url('static/assets/img/coffee-background.jpg')">
+    {% for cafe in cafes %}
+        <div class="cafe-post">
+            <div style="width:300px; height:300px; display:flex; justify-content:center;">
+                <img src={{ cafe.photo }} style="width:300; height:300px; margin-top:15%; margin-left:70%">
+            </div>
+            <div class="info">
+                <a class="cafe-name" href={{ cafe.website }}>{{ cafe.name }}</a>
+                <p class="review">{{ cafe.review }}</p>
+            </div>
+            <div class="rating-container">
+                <ul class="ratings">
+                    <li style="margin-top: 50%">Rating: {{ cafe.rating}}</li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</body>

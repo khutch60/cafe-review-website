@@ -1,0 +1,86 @@
+{% include 'header.html' %}
+
+<body style="background-image: url('static/assets/img/coffee-background.jpg')">
+<!--    <div class="post-form">-->
+<!--        <div style="margin:auto">-->
+<!--            <div>-->
+<!--                <input placeholder="Cafe Name" style="height:75px; width:600px; font-size:30px; margin-top: 20px">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <input placeholder="Website Url" style="height:75px; width:600px; font-size:30px; margin-top: 40px">-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <input placeholder="Image Url" style="height:75px; width:600px; font-size:30px; margin-top: 40px">-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <label for="coffee-rating" style="color:white; font-size:30px">Coffee</label>-->
+<!--                <select name="coffee" id="coffee-rating" style="width: 250px; height:50px; font-size: 30px">-->
+<!--                    <option value="⭐">⭐</option>-->
+<!--                    <option value="⭐⭐">⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐">⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>-->
+<!--                </select>-->
+<!--                <label for="power-rating" style="color:white; font-size:30px">Power Sockets</label>-->
+<!--                <select name="power" id="power-rating" style="width: 250px; height:50px; font-size: 30px">-->
+<!--                    <option value="⭐">⭐</option>-->
+<!--                    <option value="⭐⭐">⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐">⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <label for="wifi-rating" style="color:white; font-size:30px">Wifi</label>-->
+<!--                <select name="wifi" id="wifi-rating" style="width: 250px; height:50px; font-size: 30px; margin-left: 26px">-->
+<!--                    <option value="⭐">⭐</option>-->
+<!--                    <option value="⭐⭐">⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐">⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>-->
+<!--                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>-->
+<!--                </select>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--                <textarea placeholder="Write your review here" name="paragraph_text" cols="50" rows="18" style="font-size:25px; margin-top: 40px" maxlength="900"></textarea>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+
+<!--    </div>-->
+    <div class="post-form">
+         <div style="margin:auto">
+             <form action="{{ url_for('new_post') }}" method="POST" >
+                <div>
+                    {{ form.name(style="height:30px; width:300px; font-size:20px; margin-top: 20px") }}
+                </div>
+                <div>
+                    {{ form.website(style="height:30px; width:300px; font-size:20px; margin-top: 40px") }}
+                </div>
+                <div>
+                    {{ form.photo(style="height:30px; width:300px; font-size:20px; margin-top: 40px") }}
+                </div>
+                <div>
+                    <h2 style="color: white">Rating: </h2>
+                    {{ form.rating(style="width: 250px; height:50px; font-size: 20px;") }}
+                </div>
+                <div>
+                    {{ form.review(style="height:300px; width:600px; font-size:17px; margin-top: 40px") }}
+                </div>
+                <div>
+                    {{ form.submit(style="height:30px; width:300px; font-size:20px; margin-top: 40px") }}
+                    {{ form.hidden_tag() }}
+                </div>
+             </form>
+         </div>
+
+
+
+    </div>
+
+</body>
+</html>
