@@ -73,16 +73,6 @@ def new_post():
     return render_template("new-cafe.html", form=form)
 
 
-# with app.app_context():
-#     db.create_all()
-
-# with app.app_context():
-#     new_cafe = Cafe(name="Agora", website="https://www.agorahouston.com/",
-#                        photo="https://i.pinimg.com/736x/bd/87/d1/bd87d1689eb8a54235704dd802a70f89.jpg",
-#                        review="Very cute ambience, well decorated with 2 floors of seating. Parking was difficult when we went, there was nowhere to sit and the wait was very long to order. The ladies were not very welcoming. We asked about the Greek frappe before ordering and got a very vague answer, the coffee was instant powder with water and not did not taste good. When we asked for something else or to have some milk to at least make it taste better, we were told that it's supposed to taste watery 😕 neither lady wanted to help us with getting something we would enjoy.",
-#                        rating=3)
-#     db.session.add(new_cafe)
-#     db.session.commit()
 
 if __name__ == '__main__':
     app.run(debug=True)
